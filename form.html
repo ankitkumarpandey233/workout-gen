@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="form.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel = "icon" type = "img/ico" href = "images/tabIcon.jpg"/>
+    <title>Workout Generator Form</title>
+  </head>
+  <body class="formBody">
+    <nav>
+      <h1 class="mainTitle">Generate Your Workout</h1>
+      <a href="https://www.facebook.com/"><img class="socialIcon" src="images/facebook.png"/></a>
+      <a href="https://www.pinterest.com/"><img class="socialIcon" src="images/IMG_0050.PNG"/></a>
+      <a href="https://www.instagram.com"><img class="socialIcon" src="images/instagramV2.png"/></a>
+      <a href="https://twitter.com/twitter?lang=en"><img class="socialIcon" src="images/twitter.png"/></a>
+      <a class="opacityFix" href="index.html"><p class="homeBtn">Home</p></a>
+    </nav>
+    <div class="formBox">
+      <div class="formTitle">
+        <hr/>
+        <h2 class="formHeader">Answer the following questions for your personalized workout</h2>
+        <hr/>
+      </div>
+      <div class="formInfo">
+        <form id="workoutForm" action="form.html" method="post">
+          <ol>
+            <li>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="Name" required="required">
+            </li>
+            <li>
+              <label for="age">Age:</label>
+              <input type="number" id="age" name="age" placeholder="Age" required="required" min="15" max="100">
+            </li>
+            <li>
+              <label>Fitness Level:</label><br>
+              <input type="radio" name="level" value="Beginner" required>Beginner
+              <input type="radio" name="level" value="Intermediate" required>Intermediate
+              <input type="radio" name="level" value="Expert" required>Expert
+            </li>
+            <li>
+              <label>Length of Workout:</label><br>
+              <input type="radio" name="length" value="10min" required>10 min
+              <input type="radio" name="length" value="20min" required>20 min
+              <input type="radio" name="length" value="30min" required>30 min
+              <input type="radio" name="length" value="40min" required>40 min
+            </li>
+            <li>
+              <label>Type of Workout:</label><br>
+              <input type="radio" name="type" value="Total" required>Total Body
+              <input type="radio" name="type" value="Upper" required>Upper Body
+              <input type="radio" name="type" value="Lower" required>Lower Body
+            </li>
+            <li>
+              <label>Workout Goals:</label><br>
+              <input type="checkbox" name="goal" value="basicFitness">Basic Fitness
+              <input type="checkbox" name="goal" value="weightLoss">Weight Loss
+              <input type="checkbox" name="goal" value="muscleGain">Muscle Gain
+              <input type="checkbox" name="goal" value="cardio">Cardio
+              <input type="checkbox" name="goal" value="muscleEndurance">Muscle Endurance
+            </li>
+            <li>
+              <label>Do you have access to equipment?</label>
+              <input type="radio" name="equipment" value="true" required>Yes
+              <input type="radio" name="equipment" value="false" required>No
+            </li>
+          </ol>
+          <button id="randomButton" type="submit">Random Workout</button>
+          <input id="clickMe" type="submit" name="submit" value="Get Started!">
+        </form>
+      </div>
+    </div>
+    <footer>
+      <hr/>
+      <p>Location</p>
+    </footer>
+  </body>
+  <script src="app.js"></script>
+</html>
